@@ -1,0 +1,61 @@
+#!/bin/awk -f
+
+# Stitch - assemble a Markdown book from components
+#   Usage: awk [-v debug=1] [-v metafile=xxx.yaml] -f [me] [file]
+#   Input: a "book" file, listing one file per line
+#   The number of leading tabs determine the level
+#   Example:
+#   chap1.md
+#     intro.md
+#     requirements.md
+#   chap2.md
+#     howto.md
+#       howto_foo.md
+#       howto_bar.md
+#     task1.md
+#     task2.md
+#   chap3.md
+#     conclusion.md
+#
+#   Lines beginning with '#' are ignored
+#
+#   Output: assembled book (optionally with YAML metadata) to stdout
+
+BEGIN {
+  FS = "\t"
+  sect = "#######"
+  # Add more if you really have to, but 4 deep is as far as you *should* go.
+
+  # Transclude optional metafile data before processing the book file
+  if (metafile) {
+    cmd = "cat " metafile
+
+    if (debug) {
+      print cmd
+    } else {
+      system (cmd)
+    }
+  }
+}
+
+/^#/ { next }
+
+{
+  # The magic of awk:
+  #   NF is the number of fields (leading tabs + 1)
+  #   $NF is the content of the last field (i.e. the file name)
+  # So we're building a sed command to tack on more '#'
+  # based on number of leading tabs in the line, then executing it.
+  # (or just passing it through for NF=1)
+  if (NF > 1) {
+    cmd = "sed -e 's/^#/" substr (sect, 1, NF) "/' " $NF
+  } else {
+    cmd = "cat " $NF
+  }
+  if (debug) {
+    print cmd
+  } else {
+    system (cmd)
+    print "" # need a blank line between files
+  }
+}

@@ -1,0 +1,51 @@
+#!/usr/bin/awk -f
+
+# Extremely simple YAML parser
+# Supports nested key-value pairs
+# Grabs specified lists and outputs a sed script to process variables
+
+BEGIN {
+    FS="  "
+    if(!lists) lists="links,imgs,vars"
+
+    split(lists, ll, ",")
+    for(i in ll) {
+        listname[ll[i]] = 1 # listname[imgs] = 1, listname[links] = 1, etc
+    }
+
+    curlist = ""
+}
+
+/^---/ { next }
+
+$1 ~ /:/ {
+    sub(/:$/, "", $1)
+}
+
+$1 in listname {
+    curlist = $1
+    next
+}
+
+curlist != "" && !/^ *$/ {
+    sub(/^ +/, "", $0)
+    split($0, arr, ": ")
+    key=curlist "." arr[1]
+    value=arr[2]
+    
+    # escape special characters in value
+    gsub(/"/, "\\\"", value)
+    gsub(/'/, "\\'", value)
+    gsub(/\//, "\\/", value)
+
+    sedcmd = "s/%" key "%/" value "/g"
+
+    print sedcmd
+    next
+}
+
+# skip stuff we don't care about
+{
+    curlist=""
+    next
+}
