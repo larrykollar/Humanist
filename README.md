@@ -35,6 +35,8 @@ and you can at last push your content online.
 This is where the Humanist Publishing System comes in.
 It is based on a handful of scripts and [Pandoc],
 the only mandatory "extra" tool in the suite.
+See the [documentation] for more information.
 
 
 Pandoc: https://pandoc.org
+documentation: docs/README.md

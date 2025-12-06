@@ -5,13 +5,15 @@ Requirements:
 
 -  POSIX shell and utilities (awk, sed)
 -  Pandoc (preferably something recent like 3.8)
--  Weasyprint (to produce PDF)
+-  Weasyprint (to produce PDF) or a different engine
 
 `stitch`
 :  Goes in ~/bin  
    This Awk script uses a list of file names, tab-indented to specify nesting,
    to build a monolithic Markdown file from Markdown topics.
    Each topic file should start with a level-1 heading; `stitch` fixes nesting.
+   Use the `-v metafile=book.yaml` option to include the book metadata
+   at the beginning of the output.
    If you need custom processing, pipe the output into a `custom` script.
 
 `custom`

@@ -19,3 +19,9 @@ Requirements:
    or `%vars.varname%` and replaces them with strings or elements
    as specified in the bookmeta YAML file (or the command line).
    Add `--lua-filter=vars.lua` to your Pandoc command line.
+
+   This is, at the moment, only reliable for the coverpage content
+   (specified in the YAML file in `include-before`).
+   Until this is resolved, use the `yamlparse` script
+   to create a sed script to process variables
+   before feeding the output to Pandoc.
