@@ -18,8 +18,8 @@ to the Windows `Documents` directory using the command:
 
     ln -s /mnt/c/users/yourname/Documents Documents
 
-So in your WSL shell, `cd ~/Documents` takes you to the Documents folder
-in your native Windows system.
+So in your WSL shell, `cd ~/Documents` then takes you
+to the Documents folder in your native Windows system.
 This allows you to do your editing and housekeeping in Windows,
 if you prefer,
 and perform all processing in the WSL shell.

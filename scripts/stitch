@@ -26,7 +26,7 @@ BEGIN {
   sect = "#######"
   # Add more if you really have to, but 4 deep is as far as you *should* go.
 
-  # Transclude optional metafile data before processing the book file
+  # Optionally transclude metafile data before processing the book file
   if (metafile) {
     cmd = "cat " metafile
 

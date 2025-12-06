@@ -4,6 +4,11 @@ Requirements:
 
 -  Pandoc (preferably something recent like 3.8)
 
+The file paths assume the `XDG_DATA_HOME` environment variable
+is not set, thus defaulting to `$HOME/.local/share/`.
+If you have set `XDG_DATA_HOME` to a different value,
+use it instead.
+
 `defaults.html`
 :  Goes in ~/.local/share/pandoc/templates  
    This Pandoc template structures the book for PDF output,
