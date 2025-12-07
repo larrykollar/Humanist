@@ -1,7 +1,7 @@
 #!/bin/awk -f
 
 # Stitch - assemble a Markdown book from components
-#   Usage: awk [-v debug=1] [-v metafile=xxx.yaml] -f [me] [file]
+#   Usage: stitch [-v debug=1] [-v metafile=xxx.yaml] [file]
 #   Input: a "book" file, listing one file per line
 #   The number of leading tabs determine the level
 #   Example:

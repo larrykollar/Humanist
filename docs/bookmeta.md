@@ -39,7 +39,7 @@ cites:
 imgs:
   coverimg: <img src="../../Graphics/hyperwidget_iso.png" class="img-landscape" alt="Hyperwidget isometric view." />
   warning: <img src="../../../common/warning.svg" class="img-symbol" alt="WARNING:" />
-  
+
 # Variables
 vars:
   ProdName: Widget 2000 HyperWidget
@@ -64,7 +64,7 @@ The two exceptions:
 
 * `toc-title: Table of Contents` --- defines the title
   for the table of contents.
-  The template substitutes `$toc-title` with this value.
+  The template substitutes `$toc-title$` with this value.
 
 ## The `include-before` block {.section}
 
@@ -88,7 +88,7 @@ and an image to use the same name.
 
 In the Markdown content,
 insert the key name between `%` symbols.
-A couple examples:
+Examples:
 
 * `%cite.install%` \<-- replaced with "Hyperwidget Installation Guide"
 * `%version%` \<-- replaced with "Draft 1.1"
