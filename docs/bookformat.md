@@ -1,4 +1,4 @@
-# Book format template
+# Book template format
 
 A Pandoc HTML template
 determines the overall structure of your book:
@@ -18,12 +18,12 @@ The following is an example template:
 
      # Cover page
      include-before: |
-     <div class="maintitle">
-       <p class="title-product">%vars.ProdName%</p>
-     </div>
-     <p style="text-align: center;">%imgs.coverimg%</p>
-     <p class="title-subtitle">%vars.ProdSub%</p>
-     <p class="title-subtitle">%vars.BookType%</p>
+       <div class="maintitle">
+         <p class="title-product">%vars.ProdName%</p>
+       </div>
+       <p style="text-align: center;">%imgs.coverimg%</p>
+       <p class="title-subtitle">%vars.ProdSub%</p>
+       <p class="title-subtitle">%vars.BookType%</p>
 
      Blank line after the include-before, remember.
      The variable data gets resolved by vars.lua.
@@ -33,7 +33,7 @@ The following is an example template:
 <html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="Humanist Publishing System" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 $for(author-meta)$
   <meta name="author" content="$author-meta$" />
@@ -63,6 +63,8 @@ $if(toc)$
 <nav id="TOC" role="doc-toc">
 $if(toc-title)$
 <p class="TOCheader" id="toc-title">$toc-title$</p>
+$else$
+<p class="TOCheader" id="toc-title">Table of Contents
 $endif$
 $table-of-contents$
 </nav>
