@@ -5,16 +5,16 @@
 
      # Cover page
      include-before: |
-     <div class="maintitle">
-       <p class="title-product">%vars.ProdName%</p>
-     </div>
-     <p style="text-align: center;">%imgs.coverimg%</p>
-     <p class="title-subtitle">%vars.ProdSub%</p>
-     <p class="title-subtitle">%vars.BookType%</p>
+       <div class="maintitle">
+         <p class="title-product">%vars.ProdName%</p>
+       </div>
+       <p style="text-align: center;">%imgs.coverimg%</p>
+       <p class="title-subtitle">%vars.ProdSub%</p>
+       <p class="title-subtitle">%vars.BookType%</p>
 
      Blank line after the include-before, remember.
      The variable data gets resolved by vars.lua.
-     
+
      Place this template in ~/.local/share/pandoc/templates
   -->
 <html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
@@ -46,10 +46,21 @@ $endfor$
 $for(include-before)$
 $include-before$
 $endfor$
+$if(pub-history)$
+<div id="pub-history">
+$if(pubhist-title)$
+<p class="FMheader" id="pubhist">$pubhist-title$</p>
+$else$
+<p class="FMheader" id="pubhist">Publication History</p>
+$pub-history$
+</div>
+$endif$
 $if(toc)$
 <nav id="TOC" role="doc-toc">
 $if(toc-title)$
-<p class="TOCheader" id="toc-title">$toc-title$</p>
+<p class="FMheader" id="toc-title">$toc-title$</p>
+$else$
+<p class="FMheader" id="toc-title">Table of Contents</p>
 $endif$
 $table-of-contents$
 </nav>

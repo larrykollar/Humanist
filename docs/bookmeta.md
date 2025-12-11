@@ -27,6 +27,10 @@ include-before: |
   <p class="title-subtitle">%vars.ProdSub%</p>
   <p class="title-subtitle">%vars.BookType%</p>
 
+# Publication History
+pub-history: |
+  <p><b class="date">December 2025</b>: First draft.</p>
+
 # Links
 links:
   login: <a href="#login">Logging into the HyperWidget</a>
@@ -66,16 +70,21 @@ The two exceptions:
   for the table of contents.
   The template substitutes `$toc-title$` with this value.
 
-## The `include-before` block {.section}
+## Front matter {.section}
 
-The value of this key
+The value of the `include-before` key
 is the first content in the HTML `<body>`.
 In this example, it is only the title page;
-you could add a copyright statement or
-a publication history here as well.
+you could add a copyright statement here as well.
 
-The template outputs the table of contents
-immediately after `include-before` content.
+The title page is optionally followed
+by a publication history, specified by the `pub-history` block.
+The default heading is "Publication History,"
+the value of `pubhist-title` overrides it.
+
+The template outputs the table of contents next.
+The default heading is "Table of Contents,"
+the value of `toc-title` overrides it.
 
 ## Variables {.section}
 
