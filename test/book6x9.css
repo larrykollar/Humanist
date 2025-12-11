@@ -1,0 +1,128 @@
+/*
+ * Rules to format a 6" x 9" book,
+ * using the Humanist Publishing System.
+ * This is print-centric, so it uses print-centric units.
+ */
+
+* {
+  font-family: "DejaVu Sans Condensed", sans-serif;
+  font-size: 11pt;
+  line-height: 120%;
+}
+
+/* page setup */
+@page {
+  size: 6in 9in;
+  margin: 0.75in;
+  margin-bottom: 1in;
+}
+
+/* title page rules */
+.title-main {
+  font-size: 24pt;
+  font-weight: bold;
+  margin-bottom: 12pt;
+}
+.title-subtitle {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-bottom: 24pt;
+}
+.title-author {
+  margin-bottom: 8pt;
+}
+.title-copyright {
+  margin-bottom: 36pt;
+}
+.title-logo {
+}
+
+/* TOC and front matter */
+#TOC {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.FMheader {
+    font-size: 18pt;
+    font-weight: bold;
+    color: #444444;
+    page-break-before: always;
+}
+/* Pandoc insists on delivering TOC entries as nested ul
+   so we need to override those styles. The entire TOC is in a <nav id="TOC"> element */
+
+/* TOC1 */
+#TOC > ul {
+    display:block;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 6pt;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+/* TOC2 */
+/* We have to re-establish defaults because we're nested under TOC1 */
+#TOC > ul ul {
+    display:block;
+    list-style-type: none;
+    margin-left: 1.5em;
+    margin-right: 0;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+/* TOC3 */
+#TOC > ul ul ul {
+    display:block;
+    list-style-type: none;
+    margin-left: 3em;
+}
+
+/* TOC4 */
+#TOC > ul ul ul ul {
+    display:block;
+    list-style-type: none;
+    margin-left: 4.5em;
+}
+
+/* page numbering (TOC2-4) */
+#TOC a::after {
+    content: leader(".") target-counter(attr(href), page);
+    box-sizing: content-box;
+}
+/* page numbering (TOC1) */
+#TOC > ul > li > a::after {
+    margin-bottom: 12pt;
+    content: target-counter(attr(href), page);
+    float: right;
+}
+
+/* headings */
+h1, h2, h3, h4 {
+  font-weight: bold;
+  color: #444444;
+}
+
+h1 {
+  font-size: 18pt;
+  page-break-before: always;
+}
+h1:before {
+    counter-increment: chapter;
+    content: "Chapter " counter(chapter) ": ";
+}
+
+h2 { font-size: 16pt; }
+h3 { font-size: 13pt; }
+h4 {
+  font-size: 11pt;
+  color: #888888;
+}
+
+/* If we want to start a section on a new page… */
+.breakpg {
+  page-break-before: always;
+}

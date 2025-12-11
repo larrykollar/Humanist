@@ -1,0 +1,38 @@
+---
+# head block info
+title: The Humanist Publishing System
+author: Larry Kollar
+css: book6x9.css
+institution: Oje Media
+date: December 2025
+version: "v0.1.0"
+document-css: false
+toc-title: Table of Contents
+lang: en-US
+
+# Cover page
+# Just specifying content, CSS does the formatting/layout
+include-before: |
+  <div class="maintitle">
+    <p class="title-main">%title%</p>
+  </div>
+  <p class="title-subtitle">%vars.ProdSub%</p>
+  <p class="title-author">%author%</p>
+  <p class="title-copyright">%vars.copyright%</p>
+  <p class="title-logo">%imgs.logo%</p>
+
+# Publication History
+pub-history: |
+  <p><b>December 2025</b>: First attempt.</p>
+
+# Variables
+vars:
+  ProdName: Humanist Publishing System
+  ProdNameShort: Humanist
+  ProdSub: A PDF-centric Docs as Code Workflow
+  copyright: Copyright &copy; 2025 Larry Kollar. Copying licensed under Creative Commons Attribution-ShareAlike 4.0 International License.
+
+# Images
+imgs:
+  logo: "![Oje Media](Graphics/oje_icon.png){width=1.25in}"
+---
