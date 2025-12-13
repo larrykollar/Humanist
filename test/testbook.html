@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- This template provides the bare minimum for a book: cover page, TOC, content
      The book metadata helps fill things in.
-     Title page is in `$include-before` - use something like:
+     Title page is in include-before ... use something like:
 
      # Cover page
      include-before: |
@@ -52,6 +52,7 @@ $if(pubhist-title)$
 <p class="FMheader" id="pubhist">$pubhist-title$</p>
 $else$
 <p class="FMheader" id="pubhist">Publication History</p>
+$endif$
 $pub-history$
 </div>
 $endif$

@@ -59,21 +59,13 @@ $endfor$
 $for(include-before)$
 $include-before$
 $endfor$
-$if(pub-history)$
-$if(pubhist-title)$
-<p class="FMheader" id="pubhist">$pubhist-title$</p>
-$else$
-<p class="FMheader" id="pubhist">Publication History</p>
-$endif$
-$pub-history$
-$endif$
 
 $if(toc)$
 <nav id="TOC" role="doc-toc">
 $if(toc-title)$
 <p class="FMheader" id="toc-title">$toc-title$</p>
 $else$
-<p class="FMheader" id="toc-title">Table of Contents
+<p class="FMheader" id="toc-title">Table of Contents</p>
 $endif$
 $table-of-contents$
 </nav>

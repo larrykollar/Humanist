@@ -5,22 +5,28 @@
  */
 
 * {
-  font-family: "DejaVu Sans Condensed", sans-serif;
+  font-family: "DejaVu Serif Condensed", serif;
   font-size: 11pt;
   line-height: 120%;
+}
+
+code, .sourceCode {
+  font-family: "Anka Coder Narrow", monospace;
+  font-size: 10pt;
 }
 
 /* page setup */
 @page {
   size: 6in 9in;
-  margin: 0.75in;
-  margin-bottom: 1in;
+  margin: 0.5in;
+  margin-bottom: 0.75in;
 }
 
 /* title page rules */
 .title-main {
   font-size: 24pt;
   font-weight: bold;
+  margin-top: 3in;
   margin-bottom: 12pt;
 }
 .title-subtitle {
@@ -69,7 +75,6 @@
     display:block;
     list-style-type: none;
     margin-left: 1.5em;
-    margin-right: 0;
     margin-top: 0;
     font-weight: normal;
 }
