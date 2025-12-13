@@ -17,4 +17,6 @@ created by *stitch*.
 Add (or delete) any other intermediate or test files
 before your next commit.
 
+If you are using MacOS, add `.DS_Store` as well.
+
 <!-- more to come, I expect -->

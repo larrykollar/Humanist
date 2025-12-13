@@ -18,8 +18,8 @@ although they may have deep dependencies on
 Ruby (Jekyll) or Python (Docusaurus), or other trendy scripting languages.
 Further, none of the SSG-based systems
 are intended to produce mostly PDF instead of HTML.
-Yes, even in 2025 A.D. there are corporations
-that try to lock up documentation and restrict redistribution.
+Some companies
+want or need PDF-centric documentation deliverables.
 Maybe you work for one,
 and have not been able to convince the "right" people that documentation:
 
@@ -29,8 +29,7 @@ and have not been able to convince the "right" people that documentation:
 
 But while you're fighting that fight,
 you can still set up a docs-as-code workflow
-and produce PDFs until a miracle happens
-and you can at last push your content online.
+and produce PDFs until you can at last push your content online.
 
 This is where the Humanist Publishing System comes in.
 It is based on a handful of scripts and [Pandoc],
