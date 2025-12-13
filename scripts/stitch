@@ -1,4 +1,4 @@
-#!/bin/awk -f
+#!/usr/bin/awk -f
 
 # Stitch - assemble a Markdown book from components
 #   Usage: stitch [-v debug=1] [-v metafile=xxx.yaml] [file]
@@ -41,10 +41,7 @@ BEGIN {
 /^#/ { next }
 
 {
-  # The magic of awk:
-  #   NF is the number of fields (leading tabs + 1)
-  #   $NF is the content of the last field (i.e. the file name)
-  # So we're building a sed command to tack on more '#'
+  # Build a sed command to tack on more '#'
   # based on number of leading tabs in the line, then executing it.
   # (or just passing it through for NF=1)
   if (NF > 1) {
