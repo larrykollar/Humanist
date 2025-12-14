@@ -5,13 +5,13 @@
  */
 
 * {
-  font-family: "DejaVu Serif Condensed", serif;
+  font-family: "Liberation Sans", serif;
   font-size: 11pt;
   line-height: 120%;
 }
 
-code, .sourceCode {
-  font-family: "Anka Coder Narrow", monospace;
+code, pre, .sourceCode, .co {
+  font-family: "Liberation Mono", monospace;
   font-size: 10pt;
 }
 
@@ -24,9 +24,9 @@ code, .sourceCode {
 
 /* title page rules */
 .title-main {
-  font-size: 24pt;
+  font-size: 18pt;
   font-weight: bold;
-  margin-top: 3in;
+  margin-top: 4in;
   margin-bottom: 12pt;
 }
 .title-subtitle {
@@ -41,6 +41,7 @@ code, .sourceCode {
   margin-bottom: 36pt;
 }
 .title-logo {
+  /* in case we need it later */
 }
 
 /* TOC and front matter */
@@ -56,10 +57,11 @@ code, .sourceCode {
     page-break-before: always;
 }
 /* Pandoc insists on delivering TOC entries as nested ul
-   so we need to override those styles. The entire TOC is in a <nav id="TOC"> element */
+   so we need to override those styles.
+   The entire TOC is in a <nav id="TOC"> element */
 
 /* TOC1 */
-#TOC > ul {
+#TOC > ul li {
     display:block;
     list-style-type: none;
     margin-left: 0;
@@ -71,7 +73,7 @@ code, .sourceCode {
 
 /* TOC2 */
 /* We have to re-establish defaults because we're nested under TOC1 */
-#TOC > ul ul {
+#TOC > ul ul li {
     display:block;
     list-style-type: none;
     margin-left: 1.5em;
@@ -80,17 +82,17 @@ code, .sourceCode {
 }
 
 /* TOC3 */
-#TOC > ul ul ul {
+#TOC > ul ul ul li {
     display:block;
     list-style-type: none;
-    margin-left: 3em;
+    /* margin-left: 3em; */
 }
 
 /* TOC4 */
-#TOC > ul ul ul ul {
+#TOC > ul ul ul ul li {
     display:block;
     list-style-type: none;
-    margin-left: 4.5em;
+    /* margin-left: 4.5em; */
 }
 
 /* page numbering (TOC2-4) */
