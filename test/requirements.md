@@ -1,6 +1,6 @@
 # Requirements
 
-The Humanist Publishing System
+The %vars.ProdName%
 has two major requirements:
 
 POSIX compliance

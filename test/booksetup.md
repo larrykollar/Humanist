@@ -1,6 +1,6 @@
 # Setting up a book
 
-The Humanist Publishing System
+The %vars.ProdName%
 makes it easy to achieve a consistent book format.
 The Pandoc template
 controls the overall structure,

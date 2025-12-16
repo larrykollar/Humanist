@@ -38,7 +38,7 @@ mybook.html: $(INTERMED)
     humanist $< >$@
 
 $(INTERMED): $(TOPICS) $(GRAPHICS) $(BOOKMETA) $(BOOKFILE)
-    stitch -v bookmeta=$(BOOKMETA) $(BOOKFILE) >$@
+    $(STITCH) -v bookmeta=$(BOOKMETA) $(BOOKFILE) >$@
 
 clean::
     rm -f mybook.pdf mybook.html mybook.md

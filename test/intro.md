@@ -35,7 +35,7 @@ But while you're fighting that fight,
 you can still set up a docs-as-code workflow
 and produce PDFs until you can at last push your content online.
 
-This is where the Humanist Publishing System comes in.
+This is where the %vars.ProdName% comes in.
 It is based on a handful of scripts, [Pandoc],
 and a CSS-based PDF engine.
 The one non-POSIX script is a Pandoc filter,

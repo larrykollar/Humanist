@@ -6,7 +6,7 @@ book files:
 
 * It is often easier to rearrange a book
   when you need to move a single line
-  rather than the entire section.
+  rather than an entire section.
 
 * With some care, a topic can be reused
   in many different books.

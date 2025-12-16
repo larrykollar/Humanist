@@ -18,7 +18,7 @@ and `@media print` at-rules
 to contain print-specific rules and overrides.
 
 A fairly simple CSS can define a book format.
-If needed, study the `example6x9.css` in the `test` directory.
+If needed, study the `example6x9.css` file in the `test` directory.
 
 ## Table of Contents formatting {.section}
 
