@@ -27,7 +27,7 @@ The following is an example template:
 
      Blank line after the include-before, remember.
      The variable data gets resolved by vars.lua.
-     
+
      Place this template in ~/.local/share/pandoc/templates
   -->
 <html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
@@ -64,7 +64,7 @@ $if(toc)$
 $if(toc-title)$
 <p class="TOCheader" id="toc-title">$toc-title$</p>
 $else$
-<p class="TOCheader" id="toc-title">Table of Contents
+<p class="TOCheader" id="toc-title">Table of Contents</p>
 $endif$
 $table-of-contents$
 </nav>

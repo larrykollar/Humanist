@@ -1,6 +1,6 @@
 # Publishing
 
-The Humanist Publishing System
+The %vars.ProdName%
 is, at its core, a collection of scripts
 intended to produce PDF output
 from a collection of Markdown files.
@@ -9,7 +9,7 @@ described in [Book file format],
 provides order and structure to the book.
 
 As discussed earlier,
-you can also use the Humanist Publishing System
+you can also use the %vars.ProdName%
 with monolithic Markdown files
 (as you would with word processors).
 This allows working

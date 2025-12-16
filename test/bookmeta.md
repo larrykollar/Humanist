@@ -15,7 +15,6 @@ institution: Widgets, LLC
 date: December 2025
 version: "Draft 1.1"
 document-css: false
-toc-title: Table of Contents
 lang: en-US
 
 # Cover page

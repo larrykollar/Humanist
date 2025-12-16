@@ -19,7 +19,7 @@ piping it into other scripts, if needed.
 
 When you're ready, create the PDF using the *humanist* command.
 
-The command is very basic, invoking Pandoc
+The *humanist* command is very basic, invoking Pandoc
 and specifying the book template and Pandoc filter to use.
 If you did not include the book metadata using *stitch*,
 you must supply it on the command line:
@@ -28,7 +28,7 @@ you must supply it on the command line:
 
 This produces an HTML file; use a CSS-based PDF formatter
 to produce the PDF.
-Producing HTML as in intermediate step
+Producing HTML as an intermediate step
 allows you to correct issues such as pagination
 without reproducing the HTML.
 If you want to produce the PDF directly:
