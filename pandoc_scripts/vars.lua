@@ -1,6 +1,6 @@
 -- Expand %var% or %a.b.c% based on metadata.
 -- Works on any nesting level.
--- Completely vibe-coded via Copilot/Claude.
+-- Started out vibe-coded via Copilot/Claude, fixed by a human.
 
 local metadata = {}
 
@@ -64,7 +64,7 @@ local function replace_vars_in_str(text, meta)
   local parts = {}
   local last_pos = 1
 
-  for var_start, path, var_end in text:gmatch("()%%([%w%.]+)%%()") do
+  for var_start, path, var_end in text:gmatch("()%%([%w%.]*[%w%])%%()") do
     -- Add text before the variable
     if var_start > last_pos then
       table.insert(parts, pandoc.Str(text:sub(last_pos, var_start - 1)))
@@ -103,7 +103,7 @@ return {
   {
     Str = function(el)
       -- Check if this Str contains any %var% patterns
-      if el.text:match("%%[%w%.]+%%") then
+      if el.text:match("%%[%w%.]*[%w%]%%") then
         local parts = replace_vars_in_str(el.text, metadata)
         if #parts == 1 then
           return parts[1]

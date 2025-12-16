@@ -28,5 +28,5 @@ use it instead.
    This is, at the moment, only reliable for the coverpage content
    (specified in the YAML file in `include-before`).
    Until this is resolved, use the `yamlparse` script
-   to create a sed script to process variables
+   to create a `sed` script to process variables
    before feeding the output to Pandoc.
