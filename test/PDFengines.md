@@ -36,7 +36,8 @@ but you can either:
 
 * generate PDF directly from the Markdown file,
   bypassing Pandoc.
-  The command becomes `vivliostyle build book.md -o book.pdf`
+  The command becomes `vivliostyle build book.md -o book.pdf`.
+  However, bypassing Pandoc means variables are not processed.
 
 To install Vivliostyle, you need a recent version of `node.js`
 installed on your system.

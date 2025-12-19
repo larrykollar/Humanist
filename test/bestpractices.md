@@ -13,15 +13,22 @@ Start sentences and phrases on a new line.
 This flows well with a source control system
 when updating topics.
 
-Use [reference links] for links and images
-(some systems refer to these as "keys").
-You can create a key file,
-specifying all the links and images in the book,
-then append it to the generated book
-at publishing time.
-This allows you to change images or links in one place.
+As far as possible, abstract links and images.
+You can do this in two ways:
+
+* Use [reference links] for links and images
+  (some systems refer to these as "keys").
+  You can create a key file,
+  specifying all the links and images in the book,
+  then append it to the generated book
+  at publishing time.
+  This allows you to change images or links in one place.
+
+* Define links and images in the metadata file.
+  To avoid namespace conflicts, use lists.
 
 Use HTML where Markdown is insufficient.
+
 Use variables, discussed in [Book metadata format],
 to facilitate reuse.
 

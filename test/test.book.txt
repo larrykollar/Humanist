@@ -6,6 +6,7 @@ booksetup.md
 	bookformat.md
 	bookmeta.md
 	topic.md
+	variables.md
 	bookfile.md
 	css_setup.md
 	bestpractices.md

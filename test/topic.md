@@ -34,5 +34,12 @@ A sub-heading like `## Example {.example}`
 could be formatted in the CSS to have a light grey backgound,
 for example.
 
-The next section describes the format
-for the "book" file.
+Using variables in your topics
+can make them easy to reuse across a product line.
+For example,
+if the installation instructions
+for the Widget 1000 SmartWidget
+and the Widget 2000 HyperWidget are identical,
+you can use variables to name the product
+without having a unique copy of the topic for each.
+See [Variables] for details.

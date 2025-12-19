@@ -1,6 +1,6 @@
 # Book file format
 
-The Humanist Publishing System
+The %vars.ProdName%
 uses a very simple book file format
 to define the order and hierarchy of topics
 found in the book.
@@ -36,6 +36,7 @@ booksetup.md
 	bookformat.md
 	bookmeta.md
 	topic.md
+  variables.md
 	bookfile.md
 	css_setup.md
 	bestpractices.md
