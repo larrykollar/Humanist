@@ -47,5 +47,5 @@ If your formatter is not listed,
 you can output HTML and process it independently.
 
 
-Weasyprint: [https://weasyprint.org/]
-pdf-engine description: [https://pandoc.org/MANUAL.html#option--pdf-engine]
+[Weasyprint]: https://weasyprint.org/
+[pdf-engine description]: https://pandoc.org/MANUAL.html#option--pdf-engine

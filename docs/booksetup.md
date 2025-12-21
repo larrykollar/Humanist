@@ -27,5 +27,5 @@ refer to files in the `test` and `pandoc_scripts`
 directories for examples.
 
 
-Book file format: [bookfile.md]  
-Topic format: [topic.md]
+[Book file format]: bookfile.md
+[Topic format]: topic.md

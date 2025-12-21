@@ -1,6 +1,7 @@
 -- Expand %var% or %a.b.c% based on metadata.
 -- Works on any nesting level.
 -- Started out vibe-coded via Copilot/Claude, then fixed by LK.
+-- (I expect this is way verbose and can be pared down)
 
 local metadata = {}
 

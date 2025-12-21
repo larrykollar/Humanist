@@ -70,5 +70,11 @@ and starts the build process.
 If nothing has changed, *make* outputs a message similar to
 `mybook.pdf is up to date.`
 
+You can create intermediate files by using a command like `make mybook.md`
+without going on to produce the HTML or PDF files.
+Likewise, `make mybook.html` builds the book up the HTML file.
+This can be useful for debugging or testing filters
+that you might insert in the future.
+
 Typing *make clean* cleans up the directory,
 removing files that can be renewed by typing *make* again.

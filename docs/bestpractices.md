@@ -39,6 +39,6 @@ use phones or other small screens
 to read your documentation.
 
 
-Book metadata format: [bookmeta.md]  
-Variables: [variables.md]  
-Reference links: [https://pandoc.org/MANUAL.html#reference-links]
+[Book metadata format]: bookmeta.md
+[Variables]: variables.md
+[Reference links]: https://pandoc.org/MANUAL.html#reference-links

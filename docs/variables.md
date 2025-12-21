@@ -26,3 +26,4 @@ imgs:
 ```
 
 You can put plain text, Markdown, or HTML in variables.
+<!-- xxx this needs to be tested xxx -->
