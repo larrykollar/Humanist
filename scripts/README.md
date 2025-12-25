@@ -5,7 +5,7 @@ Requirements:
 
 -  POSIX shell and utilities (awk, sed)
 -  Pandoc (preferably something recent like 3.8)
--  Weasyprint (to produce PDF) or a different engine
+-  Any CSS3-based PDF engine
 
 `stitch`
 :  Goes in ~/bin  
@@ -14,16 +14,8 @@ Requirements:
    Each topic file should start with a level-1 heading; `stitch` fixes nesting.
    Use the `-v metafile=book.yaml` option to include the book metadata
    at the beginning of the output.
-   If you need custom processing, pipe the output into a `custom` script.
-
-`custom`
-:  Goes in the book directory  
-   This is a shell script that performs any book-specific
-   customizations.
-   This includes assigning HTML classes to paragraphs with certain patterns,
-   and processing variables.
-   (The `vars.lua` file should handle these, but so far
-   it's only reliable with the cover page variables.)
+   If you need custom processing, pipe the output into a custom script
+   before feeding the result to [Pandoc].
 
 `humanist`
 :  Goes in ~/bin  
@@ -34,12 +26,13 @@ Requirements:
    (requires `weasyprint` to be installed)
 
 `yamlparse`
-:  Goes in ~/bin  
+:  Optional  
    This Awk script reads the YAML book metadata,
-   picking certain structures (default: `links,imgs,vars`)
+   picking certain lists (default: `links,imgs,vars`)
    and building a `sed` script to process the variables.
    You can insert it into the `custom` script as a here document
    and pipe any other customizations into it.
+   You can use this as a fallback if `vars.lua` fails for any reason.
 
 Once everything is installed, you should be able to use a pipeline
 like this to process your book:
@@ -59,3 +52,6 @@ As of Pandoc 3.8, you can specify `weasyprint` (default),
 `prince`,  `wkhtmltopdf`, or `pagedjs-cli`.
 If you prefer another processor, such as `vivliostyle`,
 output to HTML then invoke the engine to produce your PDF.
+
+
+[Pandoc]: https://pandoc.org/

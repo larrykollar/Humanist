@@ -6,7 +6,7 @@
 <xsl:strip-space elements="bookmap map booktitle bookmeta frontmatter backmatter reltable" />
 
 <!-- DITAmap to Humanist book file
-    V1.0, 2025 25 Nov by Larry Kollar
+    V0.5, 2025 25 Nov by Larry Kollar
 
     We're interested mostly in the chapter & topicref entries.
     This version is nowhere near perfect, but does more or less

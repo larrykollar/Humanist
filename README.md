@@ -6,12 +6,13 @@ The TL;DR: a *humanist publishing system* means:
   with a minimum of training.
 * it has only one or two mandatory tools,
   and allows the humans to select how they interact with it.
-  Most components are interchangeable or replacable.
-* it is not only standards-based, but focuses on **common** standards.
+  Most components are interchangeable or replaceable.
+* it is not only standards-based,
+  but focuses on **common**, **well-known** standards.
   For example, use a specific Markdown variant rather than XML;
   formatting scripts shun XSLT in favor of CSS3;
   scripts should (as far as possible) use languages specified by POSIX
-  (`sh`, `awk`).
+  (`sh`, `awk`, `sed`).
 
 Many SSG-based systems (Jekyll, Docusaurus, others)
 already have many of these features,
@@ -22,10 +23,11 @@ are intended to produce mostly PDF instead of HTML.
 Some companies
 want or need PDF-centric documentation deliverables.
 Maybe you work for one,
-and have not been able to convince the "right" people that documentation:
+and have not been able to convince the "right" people
+that documentation can:
 
-* can also be a marketing tool.
-* can help potential customers feel comfortable
+* be a marketing tool.
+* help potential customers feel comfortable
   with choosing your product because they know how it works.
 
 But while you're fighting that fight,
@@ -38,5 +40,5 @@ the only mandatory "extra" tool in the suite.
 See the [documentation] for more information.
 
 
-Pandoc: https://pandoc.org
-documentation: docs/README.md
+[Pandoc]: https://pandoc.org
+[documentation]: docs/README.md
