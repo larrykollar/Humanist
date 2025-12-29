@@ -11,6 +11,9 @@ booksetup.md
 	css_setup.md
 	bestpractices.md
 publishing.md
+bookbuild.md
 	PDFengines.md
 gitignore.md
+advanced.md
+variables.md
 test.keyfile.md
