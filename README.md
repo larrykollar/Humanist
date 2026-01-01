@@ -6,7 +6,7 @@ The TL;DR: a *humanist publishing system* means:
   with a minimum of training.
 * it has only one or two mandatory tools,
   and allows the humans to select how they interact with it.
-  Most components are interchangeable or replaceable.
+  Most components are replaceable.
 * it is not only standards-based,
   but focuses on **common**, **well-known** standards.
   For example, use a specific Markdown variant rather than XML;
