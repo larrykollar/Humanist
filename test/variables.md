@@ -19,6 +19,7 @@ The following is an example:
 vars:
   ProdName: Widget 2000 HyperWidget
   ProdNameShort: HyperWidget
+  CompanyName: Widget, LLC
 
 # Images
 imgs:
@@ -26,3 +27,4 @@ imgs:
 ```
 
 You can put plain text, Markdown, or HTML in variables.
+<!-- xxx this needs to be tested xxx -->

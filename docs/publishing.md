@@ -17,4 +17,4 @@ with automatically-generated documents
 without having to break up the document.
 
 
-Book file format: [bookfile.md]
+[Book file format]: bookfile.md

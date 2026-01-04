@@ -21,18 +21,18 @@ The most important things to know are:
 * [Advanced techniques]
 
 
-Requirements: [requirements.md]  
-Installation: [installation.md]  
-Setting up a book: [booksetup.md]  
-Book format template: [bookformat.md]  
-Book metadata format: [bookmeta.md]  
-Topic format: [topic.md]  
-Book file format: [bookfile.md]  
-CSS file setup: [css_setup.md]  
-Best practices: [bestpractices.md]  
-Publishing: [publishing.md]  
-Building a book: [bookbuild.md]  
-PDF engine notes: [PDFengines.md]  
-Gitignore tips: [gitignore.md]  
-Advanced techniques: [advanced.md]  
-Variables: [variables.md]
+[Requirements]: requirements.md
+[Installation]: installation.md
+[Setting up a book]: booksetup.md
+[Book format template]: bookformat.md
+[Book metadata format]: bookmeta.md
+[Topic format]: topic.md
+[Book file format]: bookfile.md
+[CSS file setup]: css_setup.md
+[Best practices]: bestpractices.md
+[Publishing]: publishing.md
+[Building a book]: bookbuild.md
+[PDF engine notes]: PDFengines.md
+[Gitignore tips]: gitignore.md
+[Advanced techniques]: advanced.md
+[Variables]: variables.md

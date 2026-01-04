@@ -13,5 +13,5 @@ POSIX compliance
    Pandoc can convert content to a large variety of formats,
    so you can extend the Humanist Publishing System as needed.
 
-Cygwin: https://cygwin.com/  
-Pandoc: https://pandoc.org/
+[Cygwin]: https://cygwin.com/
+[Pandoc]: https://pandoc.org/
