@@ -28,7 +28,7 @@ and then re-enter it later using `source venv/bin/activate`.
 
 ## Vivliostyle {.section}
 
-Vivliostyle is not directly supported by Pandoc,
+[Vivliostyle] is not directly supported by Pandoc,
 but you can either:
 
 * generate HTML from Pandoc and create the PDF with
@@ -43,6 +43,6 @@ To install Vivliostyle, you need a recent version of `node.js`
 installed on your system.
 
 Once you have installed it,
-`vivliostyle init` creates the configuration file.
+`vivliostyle init` creates the configuration file for your document.
 You need to modify this file to contain
 either the Markdown or HTML file that you intend to input.
