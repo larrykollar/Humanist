@@ -48,6 +48,8 @@ code, pre, .sourceCode, .co {
 #TOC {
     margin-top: 0;
     margin-bottom: 0;
+    display:block;
+    list-style-type: none;
 }
 
 .FMheader {
@@ -58,41 +60,20 @@ code, pre, .sourceCode, .co {
 }
 /* Pandoc insists on delivering TOC entries as nested ul
    so we need to override those styles.
-   The entire TOC is in a <nav id="TOC"> element */
+   The entire TOC is in a <nav id="TOC"> element.
+   Let's see if the default TOC styles work better. */
 
-/* TOC1 */
-#TOC > ul li {
-    display:block;
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
-    margin-top: 6pt;
-    margin-right: 0;
-    font-weight: bold;
+#TOC li {
+  list-style: none;
 }
-
-/* TOC2 */
-/* We have to re-establish defaults because we're nested under TOC1 */
-#TOC > ul ul li {
-    display:block;
-    list-style-type: none;
-    margin-left: 1.5em;
-    margin-top: 0;
-    font-weight: normal;
+#TOC ul {
+  padding-left: 1.5em;
 }
-
-/* TOC3 */
-#TOC > ul ul ul li {
-    display:block;
-    list-style-type: none;
-    /* margin-left: 3em; */
+#TOC > ul {
+  padding-left: 0;
 }
-
-/* TOC4 */
-#TOC > ul ul ul ul li {
-    display:block;
-    list-style-type: none;
-    /* margin-left: 4.5em; */
+#TOC a:not(:hover) {
+  text-decoration: none;
 }
 
 /* page numbering (TOC2-4) */
@@ -102,7 +83,7 @@ code, pre, .sourceCode, .co {
 }
 /* page numbering (TOC1) */
 #TOC > ul > li > a::after {
-    margin-bottom: 12pt;
+    /* margin-bottom: 12pt; */
     content: target-counter(attr(href), page);
     float: right;
 }
