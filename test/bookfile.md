@@ -36,13 +36,16 @@ booksetup.md
 	bookformat.md
 	bookmeta.md
 	topic.md
-  variables.md
+	variables.md
 	bookfile.md
 	css_setup.md
 	bestpractices.md
 publishing.md
+	bookbuild.md
 	PDFengines.md
 gitignore.md
+advanced.md
+test.keyfile.md
 ```
 
 Lines beginning with `#` are ignored.

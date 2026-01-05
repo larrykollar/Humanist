@@ -48,4 +48,4 @@ You need to modify this file to contain
 either the Markdown or HTML file that you intend to input.
 
 
-Vivliostyle: [https://github.com/vivliostyle/vivliostyle-cli]
+[Vivliostyle]: https://github.com/vivliostyle/vivliostyle-cli

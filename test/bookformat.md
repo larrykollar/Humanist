@@ -79,6 +79,6 @@ $endfor$
 </html>
 ```
 
-Nearly all of the strings between `$` and `%` symbols
+Nearly all of the inline strings between `$` and `%` symbols
 represent strings defined in the book metadata.
 The next section covers defining book metadata.
