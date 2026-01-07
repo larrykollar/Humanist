@@ -12,7 +12,7 @@ stitch [-v debug=1] [-v bookmeta=metafile.yaml] bookname.book.txt > book.md
 ```
 
 * Use `-v debug=1` to output the commands instead of executing them.
-* Use `-v bookmeta=file.yaml` to prepend your book metadata.
+* Use `-v bookmeta=metafile.yaml` to prepend your book metadata.
 
 You can process the output further,
 piping it into other scripts, if needed.

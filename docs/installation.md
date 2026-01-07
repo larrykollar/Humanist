@@ -1,6 +1,6 @@
 # Installing the Humanist Publishing System
 
-For a lone writer, use the top-level `INSTALL` script.
+For a lone writer, use the top-level `INSTALL.sh` script.
 It copies the contents of both `scripts` and `pandoc_scripts`
 to where they need to be.
 It copies the other scripts to the user's `bin` directory

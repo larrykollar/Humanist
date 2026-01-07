@@ -40,8 +40,11 @@ booksetup.md
 	css_setup.md
 	bestpractices.md
 publishing.md
+	bookbuild.md
 	PDFengines.md
-gitignore.md
+advanced.md
+	gitignore.md
+test.keyfile.md
 ```
 
 Lines beginning with `#` are ignored.

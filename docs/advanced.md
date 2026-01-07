@@ -78,3 +78,7 @@ that you might insert in the future.
 
 Typing *make clean* cleans up the directory,
 removing files that can be renewed by typing *make* again.
+
+A `missing separator` error usually indicates
+a trailing space after a backslash,
+or using spaces instead of tabs to indent.
