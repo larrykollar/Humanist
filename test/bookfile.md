@@ -43,8 +43,8 @@ booksetup.md
 publishing.md
 	bookbuild.md
 	PDFengines.md
-gitignore.md
 advanced.md
+	gitignore.md
 test.keyfile.md
 ```
 

@@ -10,9 +10,10 @@ If you have different requirements for different book types,
 you can create more than one template.
 The following is an example template:
 
-```HTML
+``` html
 <!DOCTYPE html>
-<!-- This template provides the bare minimum for a book: cover page, TOC, content
+<!-- This template provides the bare minimum for a book: 
+     cover page, TOC, content
      The book metadata helps fill things in.
      Title page is in `$include-before` - use something like:
 
@@ -30,11 +31,13 @@ The following is an example template:
 
      Place this template in ~/.local/share/pandoc/templates
   -->
-<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$"
+  xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="Humanist Publishing System" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 $for(author-meta)$
   <meta name="author" content="$author-meta$" />
 $endfor$
@@ -42,12 +45,14 @@ $if(date-meta)$
   <meta name="dcterms.date" content="$date-meta$" />
 $endif$
 $if(keywords)$
-  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+  <meta name="keywords"
+    content="$for(keywords)$$keywords$$sep$, $endfor$" />
 $endif$
 $if(description-meta)$
   <meta name="description" content="$description-meta$" />
 $endif$
-  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+  <title>$if(title-prefix)$
+    $title-prefix$ – $endif$$pagetitle$</title>
 $for(css)$
   <link rel="stylesheet" href="$css$" />
 $endfor$

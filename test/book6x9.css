@@ -4,15 +4,24 @@
  * This is print-centric, so it uses print-centric units.
  */
 
+ @font-face {
+  font-family: MonoFont;
+  src: url(file:///usr/local/share/fonts/a/AnkaCoder_C75_r.ttf);
+ }
+
 * {
   font-family: "Liberation Sans", serif;
   font-size: 11pt;
   line-height: 120%;
 }
 
-code, pre, .sourceCode, .co {
-  font-family: "Liberation Mono", monospace;
-  font-size: 10pt;
+body {
+  counter-reset: chapter;
+}
+
+code, code *, pre, pre * {
+  font-family: MonoFont, "Liberation Mono", monospace;
+  word-break: normal;
 }
 
 /* page setup */
@@ -49,7 +58,6 @@ code, pre, .sourceCode, .co {
     margin-top: 0;
     margin-bottom: 0;
     display:block;
-    list-style-type: none;
 }
 
 .FMheader {
@@ -60,17 +68,21 @@ code, pre, .sourceCode, .co {
 }
 /* Pandoc insists on delivering TOC entries as nested ul
    so we need to override those styles.
-   The entire TOC is in a <nav id="TOC"> element.
-   Let's see if the default TOC styles work better. */
+   The entire TOC is in a <nav id="TOC"> element. */
 
 #TOC li {
   list-style: none;
 }
 #TOC ul {
   padding-left: 1.5em;
+  font-weight: normal;
 }
 #TOC > ul {
   padding-left: 0;
+  font-weight: bold;
+}
+#TOC > ul > li {
+    padding-top: 4pt;
 }
 #TOC a:not(:hover) {
   text-decoration: none;
@@ -83,7 +95,6 @@ code, pre, .sourceCode, .co {
 }
 /* page numbering (TOC1) */
 #TOC > ul > li > a::after {
-    /* margin-bottom: 12pt; */
     content: target-counter(attr(href), page);
     float: right;
 }
@@ -109,6 +120,14 @@ h4 {
   font-size: 11pt;
   color: #888888;
 }
+
+h1 code, h2 code, h3 code, h4 code {
+  font-size: 10pt;
+}
+
+/* ul, ol {
+  margin-left: -1.5em;
+} */
 
 /* If we want to start a section on a new page… */
 .breakpg {

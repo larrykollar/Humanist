@@ -14,7 +14,7 @@ You can use YAML lists to separate
 links, images, and text variables if you wish.
 The following is an example:
 
-```yaml
+``` yaml
 # Variables
 vars:
   ProdName: Widget 2000 HyperWidget

@@ -17,7 +17,7 @@ created by *stitch*.
 Add (or delete) any other intermediate or test files
 before your next commit.
 
-If you are using the %vars.Prodname% under MacOS,
+If you are using the %vars.ProdName% under MacOS,
 add `.DS_Store` to the list.
 
 <!-- more to come, I expect -->

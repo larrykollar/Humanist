@@ -31,19 +31,23 @@ You can then separate table of contents rules
 from other list types by specifying `#TOC`.
 For example:
 
-```css
-#TOC {
-    /* general TOC formatting */
+``` css
+#TOC li {
+  list-style: none;
+}
+#TOC ul {
+  padding-left: 1.5em;
+  font-weight: normal;
 }
 #TOC > ul {
-    /* TOC1 */
-    display:block;
-    list-style-type: none;
-    font-weight: bold;
+  padding-left: 0;
+  font-weight: bold;
 }
-#TOC > ul ul {
-    /* TOC2 - you may need to reset TOC1-specific settings */
-    font-weight: normal;
-    margin-left: 1.5em;
+#TOC > ul > li {
+    padding-top: 4pt;
 }
 ```
+
+These rules indent 1.5em for each TOC level.
+Top-level entries (chapter entries)
+have some space above and are bolded.

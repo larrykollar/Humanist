@@ -36,8 +36,10 @@ cites:
 
 # Images
 imgs:
-  coverimg: <img src="../../Graphics/hyperwidget_iso.png" class="img-landscape" alt="Hyperwidget isometric view." />
-  warning: <img src="../../../common/warning.svg" class="img-symbol" alt="WARNING:" />
+  coverimg: <img src="../../Graphics/hyperwidget_iso.png"
+    class="img-landscape" alt="Hyperwidget isometric view." />
+  warning: <img src="../../../common/warning.svg"
+    class="img-symbol" alt="WARNING:" />
 
 # Variables
 vars:
