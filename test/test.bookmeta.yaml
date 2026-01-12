@@ -23,13 +23,14 @@ include-before: |
 # Publication History
 pub-history: |
   <p><b>December 2025</b>: First attempt.</p>
+  <p><b>January 2026</b>: Release 1.0.</p>
 
 # Variables
 vars:
   ProdName: Humanist Publishing System
   ProdNameShort: Humanist
   ProdSub: A PDF-centric Docs as Code Workflow
-  copyright: Copyright &copy; 2025 Larry Kollar. Copying licensed under Creative Commons Attribution-ShareAlike 4.0 International License.
+  copyright: Copyright &copy; 2026 Larry Kollar. Copying licensed under Creative Commons Attribution-ShareAlike 4.0 International License.
 
 # Images
 imgs:

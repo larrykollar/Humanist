@@ -7,14 +7,14 @@ there may be some extra setup and usage steps.
 
 ## Weasyprint {.section}
 
-Pandoc uses Weasyprint as the default PDF engine.
+Pandoc uses [Weasyprint] as the default PDF engine.
 As of December 2025, you can install Weasyprint v67.0
 on a current POSIX system
 with Python 3.10 or newer, and Pango 1.44 or newer.
 Install Weasyprint in a Python virtual environment (*venv*),
 to avoid clashing with other modules:
 
-```sh
+``` sh
 python3 -m venv venv
 source venv/bin/activate
 pip install weasyprint
