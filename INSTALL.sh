@@ -25,22 +25,32 @@ cp scripts/humanist scripts/stitch $HOME/bin
 chmod +x $HOME/bin/humanist $HOME/bin/stitch
 
 # make sure $PATH includes ~/bin
-echo $PATH | grep -q "$HOME/bin:" || (
-  printf "# $HOME/bin added to PATH by Humanist install: " >> $HOME/.profile
-  date >>$HOME/.profile
-  echo "export PATH=${HOME}/bin:${PATH}" >> $HOME/.profile
-  export PATH=${HOME}/bin:${PATH} # so we can use it right away
+# MacOS uses zsh (.zshrc); bash, ash, and ksh use .profile
+# and csh (.cshrc) seems to be still around (I used it in the 80s)
+# This isn't nearly as robust as I'd like it to be for several reasons:
+# 1) I probably haven't covered all the shells in use
+# 2) ~/bin might be defined in the $rcfile but not in use, for example:
+# 3) On my Kubuntu laptop, .profile wasn't being loaded (had to fix by hand)
+# +) Anything else I haven't noticed yet
+rcfile=$HOME/.profile
+if [ `basename $SHELL` = "zsh" ]; then rcfile=$HOME/.zshrc; fi
+if [ `basename $SHELL` = "csh" ]; then rcfile=$HOME/.cshrc; fi
+
+echo $PATH | grep -q "${HOME}/bin:" || (
+  printf "# $HOME/bin added to PATH by Humanist install: " >> $rcfile
+  date >> $rcfile
+  echo "export PATH=${HOME}/bin:${PATH}" >> $rcfile
 )
 
 # check for presence of Pandoc and PDF formatters
 # print links for each if needed
 which -s pandoc || (
-  echo "Pandoc is required for the Humanist Publishing System."
+  echo "\nPandoc is required for the Humanist Publishing System."
   echo "See <https://pandoc.org/installing.html> for installion info."
 )
 which -s weasyprint || (
-  echo "weasyprint is the default PDF formatter <weasyprint.org>."
+  echo "\nWeasyprint is the default PDF formatter <weasyprint.org>."
   echo "You can use a different formatter; see the Pandoc docs"
-  echo "<https://pandoc.org/MANUAL.html#option--pdf-engine> for details."
+  echo "<pandoc.org/MANUAL.html#option--pdf-engine> for details."
   echo "Ignore this message if you chose a different formatter."
 )
