@@ -1,8 +1,8 @@
 
 # Name our utilities so we can change them later
-HUMANIST = ../scripts/humanist
+HUMANIST = humanist
 PDFENGINE = weasyprint
-STITCH = ../scripts/stitch
+STITCH = stitch
 
 # Name our components
 TOPICS = advanced.md bestpractices.md bookbuild.md bookfile.md \

@@ -4,7 +4,7 @@ A Pandoc HTML template
 determines the overall structure of your book:
 what content goes on the cover page and other front matter
 (including the table of contents),
-then anything following the book content (body).
+then any back matter following the book content (body).
 
 If you have different requirements for different book types,
 you can create more than one template.
@@ -12,7 +12,7 @@ The following is an example template:
 
 ``` html
 <!DOCTYPE html>
-<!-- This template provides the bare minimum for a book: 
+<!-- This template provides the bare minimum for a book:
      cover page, TOC, content
      The book metadata helps fill things in.
      Title page is in `$include-before` - use something like:

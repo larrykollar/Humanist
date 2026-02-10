@@ -8,3 +8,4 @@
 [pdf-engine description]: https://pandoc.org/MANUAL.html#option--pdf-engine
 [Reference links]: https://pandoc.org/MANUAL.html#reference-links
 [Weasyprint]: https://weasyprint.org/
+[Vivliostyle]: https://github.com/vivliostyle/vivliostyle-cli

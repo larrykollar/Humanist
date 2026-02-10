@@ -46,7 +46,7 @@ BEGIN {
   # (or just passing it through for NF=1)
   # The '/```/,/```/b;' part bypasses leading '#' in code blocks.
   if (NF > 1) {
-    cmd = "sed -E '/```/,/```/b; s/^#/" substr (sect, 1, NF) "/' " $NF
+    cmd = "sed -E '/^```/,/^```/b; s/^#/" substr (sect, 1, NF) "/' " $NF
   } else {
     cmd = "cat " $NF
   }
